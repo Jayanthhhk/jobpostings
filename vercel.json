@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/generateResume.js": {
+      "runtime": "edge"
+    }
+  }
+}
