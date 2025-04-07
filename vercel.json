@@ -1,18 +1,9 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/generateResume.js",
-      "use": "@vercel/edge-functions"
-    },
-    {
-      "src": "vite.config.js",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+  "functions": {
+    "api/generateResume.js": {
+      "runtime": "edge"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
