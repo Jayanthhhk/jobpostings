@@ -12,8 +12,8 @@ const NavBar = () => {
 
         <li><Link to="/jobs">Jobs</Link></li>
         <li><Link to="/internships">Internships</Link></li>
-        <li><Link to="/news">News</Link></li>
-
+{/*         <li><Link to="/news">News</Link></li>
+ */}
       </ul>
     </nav>
 
