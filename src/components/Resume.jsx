@@ -11,17 +11,21 @@ const Resume = () => {
     const prompt = `Generate a professional resume for a software engineer with experience in React, Node.js, and PostgreSQL.`;
 
     try {
-      const response = await fetch('/api/generateResume', {
+      const response = await fetch('https://your-vercel-app.vercel.app/api/generateResume', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ prompt }),
       });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const data = await response.json();
       setResume(data.output); // ✅ assuming you return { output: resumeText }
-    } catch (err) {
+    } 
+    catch (err) {
       setResume('Error generating resume.');
       console.error(err);
     } finally {

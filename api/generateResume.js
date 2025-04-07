@@ -18,7 +18,13 @@ export default async function handler(req) {
   });
 
   const data = await response.json();
-  return new Response(JSON.stringify(data), {
-    headers: { "Content-Type": "application/json" },
+
+  return new Response(JSON.stringify({ output: data.choices[0].message.content }), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*", // ✅ Allow all origins (for dev)
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+    },
   });
 }
