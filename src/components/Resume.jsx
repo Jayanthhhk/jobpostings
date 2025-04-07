@@ -1,48 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Resume = () => {
-  const [resume, setResume] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  const generateResume = async () => {
-    setLoading(true);
-    setResume('');
-
-    const prompt = `Generate a professional resume for a software engineer with experience in React, Node.js, and PostgreSQL.`;
-
-    try {
-      const response = await fetch('https://your-vercel-app.vercel.app/api/generateResume', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ prompt }),
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      setResume(data.output); // ✅ assuming you return { output: resumeText }
-    } 
-    catch (err) {
-      setResume('Error generating resume.');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div className="resume-container">
-      <h2>AI Resume Builder</h2>
-      <button onClick={generateResume} disabled={loading}>
-        {loading ? 'Generating...' : 'Generate Resume'}
-      </button>
-      <pre className="resume-output">{resume}</pre>
+      <h2>Boost Your Resume</h2>
+      <p>Get started with resume building using these platforms:</p>
+      <ul className="resume-links">
+        <li><a href="https://www.canva.com/resumes/" target="_blank" rel="noopener noreferrer">Canva</a></li>
+        <li><a href="https://novoresume.com/" target="_blank" rel="noopener noreferrer">Novoresume</a></li>
+        <li><a href="https://www.zety.com/resume-builder" target="_blank" rel="noopener noreferrer">Zety</a></li>
+        <li><a href="https://resumegenius.com/" target="_blank" rel="noopener noreferrer">Resume Genius</a></li>
+      </ul>
     </div>
   );
 };
 
 export default Resume;
-

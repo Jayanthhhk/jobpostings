@@ -255,76 +255,76 @@ body {
   font-weight: 500;
 }
 
-/* Resume Section */
+/* Resume container styling */
 .resume-container {
-  max-width: 800px;
-  margin: 80px auto;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.resume-container h2 {
-  font-size: 2.2rem;
-  color: #2d3436;
-  margin-bottom: 10px;
-}
-
-.resume-container p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.resume-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.resume-links a {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.resume-links a:hover {
-  background-color: #0056b3;
-}
-
-.resume-container {
-  max-width: 800px;
+  max-width: 750px;
   margin: 50px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
+  padding: 40px 30px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.resume-container button {
-  padding: 12px 20px;
-  background-color: #007bff;
-  border: none;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
+/* Heading */
+.resume-container h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Description text */
+.resume-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Resume links section */
+.resume-links {
+  list-style: none;
+  padding-left: 0;
   margin-top: 10px;
 }
 
-.resume-output {
-  margin-top: 20px;
-  text-align: left;
-  white-space: pre-wrap;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
+/* Individual link items */
+.resume-links li {
+  margin-bottom: 14px;
 }
 
+/* Anchor styles */
+.resume-links a {
+  font-size: 16px;
+  color: #0073e6;
+  text-decoration: none;
+  padding: 4px 0;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
 
+/* Hover effect */
+.resume-links a:hover {
+  color: #004c99;
+  border-bottom: 1px solid #004c99;
+}
+
+.resume-container button {
+  background-color: #0073e6;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 10px;
+}
+
+.resume-container button:hover {
+  background-color: #005bb5;
+}
