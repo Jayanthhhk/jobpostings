@@ -1,17 +1,9 @@
 {
-  "functions": {
-    "api/generateResume.js": {
-      "runtime": "edge"
-    }
-  }
-}
-
-{
   "version": 2,
   "builds": [
     {
       "src": "api/generateResume.js",
-      "use": "@vercel/node"
+      "use": "@vercel/edge-functions"
     },
     {
       "src": "vite.config.js",
